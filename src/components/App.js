@@ -1,7 +1,6 @@
 
-import React from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import './../styles/App.css';
-import { BrowserRouter, Route, Routes, link } from "react-router-dom";
 import Item1 from "./Item1";
 import Item2 from "./Item2";
 import Item3 from "./Item3";
@@ -12,20 +11,20 @@ const App = () => {
     <h1>Item List</h1>
     <ul>
       <li>
-        <link to="/items/1">Item 1</link>
+        <Link to="/items/1">Item 1</Link>
       </li>
       <li>
-        <link to="/items/2">Item 2</link>
+        <Link to="/items/2">Item 2</Link>
       </li>
       <li>
-        <link to="/items/3">Item 3</link>
+        <Link to="/items/3">Item 3</Link>
       </li>
     </ul>
 
     <Routes>
-      <Route path="/items/:id" element={<Item1 />} />
-      <Route path="/items/:id" element={<Item2 />} />
-      <Route path="/items/:id" element={<Item3 />} />
+      <Route path="/items/1" element={<Item1 />} />
+      <Route path="/items/2" element={<Item2 />} />
+      <Route path="/items/3" element={<Item3 />} />
     </Routes>
     </BrowserRouter>
   )
